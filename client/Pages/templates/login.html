@@ -1,0 +1,18 @@
+<template name="login">
+	{{#unless currentUser}}
+		<form id="login-form" action="action" role="form">
+      		<div>
+      			<div class="form-group col-xs-4">
+        			<input type="text" id="login-username" placeholder = "username" class="form-control input-sm signIn"/>
+      			</div>
+      			<div class="form-group col-xs-4">
+        			<input type="password" id="login-password" placeholder = "password" class="form-control input-sm signIn" />
+       			</div>
+        			<input type="submit" id="login-button" value="Log In" class="btn btn-default  btn-sm"/>
+       
+     		</div>
+   		</form> 
+   	{{else}}
+   		<a href="{{pathFor 'chat'}}" class="btn btn-default"> Go to chat... </a>
+   	{{/unless}}
+</template>
