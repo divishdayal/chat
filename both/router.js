@@ -4,7 +4,13 @@ Router.configure({
 });
 
 Router.route('/', {name:'login'});
-Router.route('/chat', {name:'chat'});
+Router.route('/chat', {name:'chat',
+						 waitOn: function() {     return Meteor.subscribe('messages', Session.get('msg_count'))  }});
+// Router.route('/chat/:_id', 
+// 				{name:'chatPage',
+// 				 waitOn: function() {     return [Meteor.subscribe('messages', this.params._id)]  },
+// 				 data: function() { return Messages.find() }
+// 				});
 
 
 

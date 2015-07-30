@@ -1,3 +1,48 @@
 <template name="chat">
-	<h2> chat </h2>
+	<div class="chat">
+	{{#unless no_more_msgs}}
+	<button id="more_msgs" class="btn btn-default  btn-sm"> load more messages... </button>
+	{{else}}
+	<p> no more messages. </p>
+	{{/unless}}
+		{{#each messages}}
+			{{> message}}
+		{{/each}}
+	</div>
+</template>
+
+<template name="message">
+{{#if currentUser}}
+	{{#if isActive}}
+		<div class="userActive">
+		{{#unless isSameAuthor}}
+			<!-- <img src="/resources/divish1.jpg" class="circular"> -->
+			<h4 class='chatHeadingAc right'> {{messageAuthor}} </h4>
+			<br class="break">
+		{{/unless}}
+			<div class="time right">
+				<p> {{time}} </p>
+			</div>
+			<div class="text right">
+				<p> {{this.message}}</p>
+			</div>
+		</div>
+		<br class="break">
+	{{else}}
+		<div class="userInactive">
+			{{#unless isSameAuthor}}
+				<h4 class='chatHeadingInac right'> {{messageAuthor}} </h4>
+				<br class="break">
+			{{/unless}}
+			<div class="time right">
+				<p> {{time}} </p>
+			</div>
+			<div class="text right">
+				<p> {{this.message}}</p>
+			</div>
+		</div>
+		<br class="break">
+	{{/if}}
+{{/if}}
+	{{> send}}
 </template>

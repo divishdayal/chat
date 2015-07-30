@@ -4,6 +4,7 @@
 }
 .yield{
 	margin-top: 5%;
+  margin-bottom:7%;
 }
 
 @-webkit-keyframes fadeOut {
@@ -39,4 +40,52 @@
   clear: both;
   margin-bottom: 5px;
   pointer-events: auto;
+}
+
+/*.chat{
+  margin-left: 5%;
+}*/
+
+.chatHeadingAc{
+  float:left;
+  color: #5B5ED6;
+  font-weight: 600;
+}
+
+.chatHeadingInac{
+  float:left;
+  font-weight: 600;
+  color: #1A1986;
+
+}
+
+.time{
+  float:left;
+  font-size: 0.9em;
+  color: gray;
+}
+
+.text{
+  float:left;
+  margin-left: 5%;
+}
+.break {
+  clear: both;
+}
+
+.circular {
+  margin-left: 2%;
+  float:left;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  }
+.right{
+  margin-left:5%;
+}
+#more_msgs{
+  margin: 1%;
+  margin-left: 5%;
 }
