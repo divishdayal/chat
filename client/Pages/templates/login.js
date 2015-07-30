@@ -19,7 +19,8 @@ Template.login.events({
           // The user might not have been found, or their passwword
           // could be incorrect. Inform the user that their
           // login attempt has failed. 
-        else{ console.log("logged is successful");}          // The user has been logged in.
+        else{ console.log("logged is successful");
+              current=null;}          // The user has been logged in.
         Router.go('/chat');
         
       });

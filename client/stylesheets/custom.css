@@ -31,7 +31,7 @@
   pointer-events: none;
   opacity: 0.9;
 }
-.alert {
+.alerterror {
           animation: fadeOut 2700ms ease-in 0s 1 forwards;
   -webkit-animation: fadeOut 2700ms ease-in 0s 1 forwards;
      -moz-animation: fadeOut 2700ms ease-in 0s 1 forwards;
@@ -89,3 +89,13 @@
   margin: 1%;
   margin-left: 5%;
 }
+
+#newMessage{
+  margin : 10px;
+}
+
+.no_more_msgs{
+  text-align: center;
+  float:left;
+}
+  

@@ -3,12 +3,19 @@
 	{{#unless no_more_msgs}}
 	<button id="more_msgs" class="btn btn-default  btn-sm"> load more messages... </button>
 	{{else}}
-	<p> no more messages. </p>
+	<div class="blank col-xs-4"></div>
+	<div class="alert alert-info no_more_msgs col-xs-4">
+		No more messages.
+	</div>
+	<br class="break">
 	{{/unless}}
+	<div class="messagelist">
 		{{#each messages}}
 			{{> message}}
 		{{/each}}
 	</div>
+	</div>
+{{> send}}
 </template>
 
 <template name="message">
@@ -44,5 +51,5 @@
 		<br class="break">
 	{{/if}}
 {{/if}}
-	{{> send}}
+
 </template>

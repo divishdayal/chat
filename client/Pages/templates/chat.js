@@ -34,3 +34,8 @@ Template.chat.events({
 		Session.set('msg_count', msg_count + 20)
 	}
 });
+
+Template.message.rendered = function () {
+	window.scrollTo(0, document.body.scrollHeight);
+	// $("#messageInput").focus();
+};
